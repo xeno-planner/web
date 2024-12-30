@@ -7,6 +7,16 @@ import type { AsChild, WithComp } from './slotable.types';
  * HOC for creating slotable components (powered by ``@radix-ui/react-slot``).
  * @param baseComp
  * @param slot
+ * @example
+ * const Overlay = slotable<'div', OverlayProps & OverlayVariantsType>(
+ *   'div',
+ *   ({ Comp, className, shrink, ...props }) => (
+ *     <Comp
+ *       className={cn(overlayVariants({ shrink }), className)}
+ *       {...props}
+ *     />
+ *   ),
+ * );
  */
 export function slotable<TComp extends ElementType, TProps = unknown>(
   baseComp: TComp,
