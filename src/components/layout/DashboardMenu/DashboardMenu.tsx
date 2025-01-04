@@ -17,6 +17,7 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   className,
   items = dashboardMenuData,
   bottomItems = dashboardBottomMenuData,
+  // bottomItems = [],
   ...props
 }) => {
   return (
@@ -31,10 +32,14 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
       <ul className={cn('flex-grow flex flex-col')}>
         {traverseNavItems(items)}
 
-        <Spacer className={cn('bg-red-500/0')} />
-        <Divider />
+        {bottomItems && bottomItems.length > 0 && (
+          <>
+            <Spacer className={cn('bg-red-500/0')} />
+            <Divider />
 
-        {traverseNavItems(bottomItems)}
+            {traverseNavItems(bottomItems ?? [])}
+          </>
+        )}
       </ul>
     </nav>
   );

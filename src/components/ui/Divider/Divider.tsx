@@ -10,7 +10,10 @@ const Divider: FC<DividerVariantsType> = ({ axis }) => {
   return (
     <div
       aria-hidden
-      className={cn('bg-secondary-border', dividerVariants({ axis }))}
+      className={cn(
+        'bg-secondary-border flex-shrink-0',
+        dividerVariants({ axis }),
+      )}
     ></div>
   );
 };
