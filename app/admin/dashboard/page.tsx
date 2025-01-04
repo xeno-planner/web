@@ -14,7 +14,7 @@ const AdminDashboardPage: FC<unknown> = () => {
       />
 
       <section className={cn('p-[--p-level-2]')}>
-        <StatGrid className={cn('!p-0')}>
+        <StatGrid className={cn('!p-0 columns-1')}>
           <DbStatusView />
         </StatGrid>
       </section>
