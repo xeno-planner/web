@@ -9,7 +9,7 @@ import { Divider, Spacer } from '@/src/components/ui';
 import styles from './DashboardMenu.module.scss';
 import type { DashboardMenuProps } from './DashboardMenu.props';
 import { traverseNavItems } from './DashboardMenu.utils.tsx';
-import { dashboardMenuData } from './dashboard.menu.data.ts';
+import { adminMenuData, dashboardMenuData } from './dashboard.menu.data.ts';
 
 const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   className,
@@ -27,6 +27,7 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
     }
 
     case 'admin': {
+      items = adminMenuData;
       break;
     }
   }

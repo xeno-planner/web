@@ -16,6 +16,8 @@ export class ADMIN_PAGES {
   private static BASE_URL = '/admin';
 
   static DASHBOARD = `${this.BASE_URL}/dashboard`;
+  static ANALYTICS = `${this.BASE_URL}/analytics`;
+  static ROLES = `${this.BASE_URL}/roles`;
 }
 
 /* eslint-enable no-unused-vars */

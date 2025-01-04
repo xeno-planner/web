@@ -1,7 +1,10 @@
 import {
+  AreaChart,
   ArrowLeft,
   CalendarRange,
+  Drama,
   LayoutDashboard,
+  ServerCog,
   Settings,
   Shield,
   SquareKanban,
@@ -54,6 +57,26 @@ export const dashboardBottomMenuData: DashboardMenuData = [
     href: ADMIN_PAGES.DASHBOARD,
     children: 'Панель админа',
     'aria-disabled': false,
+  },
+];
+
+export const adminMenuData: DashboardMenuData = [
+  {
+    icon: ServerCog,
+    href: ADMIN_PAGES.DASHBOARD,
+    children: 'Состояние',
+  },
+  {
+    icon: AreaChart,
+    href: ADMIN_PAGES.ANALYTICS,
+    children: 'Аналитика',
+    'aria-disabled': true,
+  },
+  {
+    icon: Drama,
+    href: ADMIN_PAGES.ROLES,
+    children: 'Роли',
+    'aria-disabled': true,
   },
 ];
 
