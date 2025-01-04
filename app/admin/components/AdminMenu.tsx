@@ -28,7 +28,7 @@ const AdminMenu: FC<Pick<ComponentProps<typeof DashboardMenu>, 'variant'>> = ({
         <>
           <div
             aria-hidden
-            className={cn('aspect-square flex-center')}
+            className={cn('flex-center')}
           >
             <CircleLoader />
           </div>

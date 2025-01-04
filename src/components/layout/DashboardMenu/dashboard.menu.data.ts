@@ -65,17 +65,20 @@ export const adminMenuData: DashboardMenuData = [
     icon: ServerCog,
     href: ADMIN_PAGES.DASHBOARD,
     children: 'Состояние',
+    reliesOn: ['canAccessAdminPage'],
   },
   {
     icon: AreaChart,
     href: ADMIN_PAGES.ANALYTICS,
     children: 'Аналитика',
+    reliesOn: ['canAccessAdminPage'],
     'aria-disabled': true,
   },
   {
     icon: Drama,
     href: ADMIN_PAGES.ROLES,
     children: 'Роли',
+    reliesOn: ['canAccessAdminPage'],
     'aria-disabled': true,
   },
 ];

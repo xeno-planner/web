@@ -1,17 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Loader } from 'lucide-react';
+import { Loader, type LucideProps } from 'lucide-react';
 import { type FC } from 'react';
 
 import type { CircleLoaderProps } from './CircleLoader.props';
 
 const Icon = motion(Loader);
 
-const CircleLoader: FC<CircleLoaderProps> = () => {
+const CircleLoader: FC<CircleLoaderProps & Pick<LucideProps, 'size'>> = ({
+  size = '1em',
+}) => {
   return (
     <Icon
-      size={'1em'}
+      size={size}
       initial={{
         rotate: '0turn',
       }}

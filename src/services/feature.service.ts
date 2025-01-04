@@ -1,7 +1,13 @@
+import type { AsyncReturnType } from '@xenopomp/advanced-types';
+
 import { axiosWithAuth } from '@/src/api/interceptors.ts';
 
+export type AppFeature = keyof AsyncReturnType<
+  (typeof FeatureService)['getFeatures']
+>;
+
 export class FeatureService {
-  private static BASE_URL = '/user/features';
+  static BASE_URL = '/user/features';
 
   static async getFeatures() {
     let canAccessAdminPage = true;
@@ -15,6 +21,25 @@ export class FeatureService {
 
     return {
       canAccessAdminPage,
+      canVisit: false,
     };
+  }
+
+  // Checks all urls for availability
+  static async featuresAvailable(features?: AppFeature[]) {
+    // No one feature is required
+    if (!features) {
+      return true;
+    }
+
+    const userAvailableFeatures = await this.getFeatures();
+
+    for (const feat of features) {
+      if (!userAvailableFeatures[feat]) {
+        return false;
+      }
+    }
+
+    return true;
   }
 }
