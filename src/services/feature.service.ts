@@ -11,6 +11,7 @@ export class FeatureService {
 
   static async getFeatures() {
     let canAccessAdminPage = true;
+    let canViewDbStatus = true;
 
     // Check if user can access admin page or not
     await axiosWithAuth
@@ -19,8 +20,13 @@ export class FeatureService {
         canAccessAdminPage = false;
       });
 
+    await axiosWithAuth.get(`${this.BASE_URL}/can-view-db-status`).catch(() => {
+      canViewDbStatus = false;
+    });
+
     return {
       canAccessAdminPage,
+      canViewDbStatus,
     };
   }
 }

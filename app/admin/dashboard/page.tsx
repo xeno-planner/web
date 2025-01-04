@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import type { FC } from 'react';
 
 import DashboardHeader from '@/src/components/layout/DashboardHeader';
@@ -6,10 +7,11 @@ const AdminDashboardPage: FC<unknown> = () => {
   return (
     <main>
       <DashboardHeader
-        heading='Главная'
+        heading='Состоние сервера'
         sticky
       />
-      Admin
+
+      <section className={cn('p-[--p-level-2]')}>Admin</section>
     </main>
   );
 };
