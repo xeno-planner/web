@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   CalendarRange,
   LayoutDashboard,
   Settings,
@@ -53,5 +54,13 @@ export const dashboardBottomMenuData: DashboardMenuData = [
     href: ADMIN_PAGES.DASHBOARD,
     children: 'Панель админа',
     'aria-disabled': false,
+  },
+];
+
+export const adminBottomMenuData: DashboardMenuData = [
+  {
+    icon: ArrowLeft,
+    href: DASHBOARD_PAGES.HOME,
+    children: 'Назад',
   },
 ];

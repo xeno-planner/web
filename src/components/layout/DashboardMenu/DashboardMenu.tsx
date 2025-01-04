@@ -9,16 +9,33 @@ import styles from './DashboardMenu.module.scss';
 import type { DashboardMenuProps } from './DashboardMenu.props';
 import { traverseNavItems } from './DashboardMenu.utils.tsx';
 import {
+  adminBottomMenuData,
   dashboardBottomMenuData,
   dashboardMenuData,
 } from './dashboard.menu.data.ts';
 
 const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   className,
-  items = dashboardMenuData,
-  bottomItems = dashboardBottomMenuData,
+  items,
+  bottomItems,
+  variant = 'default',
   ...props
 }) => {
+  // Setup default items
+
+  switch (variant) {
+    case 'default': {
+      items = dashboardMenuData;
+      bottomItems = dashboardBottomMenuData;
+      break;
+    }
+
+    case 'admin': {
+      bottomItems = adminBottomMenuData;
+      break;
+    }
+  }
+
   return (
     <nav
       className={cn(
@@ -29,7 +46,7 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
       {...props}
     >
       <ul className={cn('flex-grow flex flex-col')}>
-        {traverseNavItems(items)}
+        {traverseNavItems(items ?? [])}
 
         {bottomItems && bottomItems.length > 0 && (
           <>
