@@ -3,16 +3,13 @@
 import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 
+import { AdminMenu } from '@/app/admin/components';
 import { Divider, Spacer } from '@/src/components/ui';
 
 import styles from './DashboardMenu.module.scss';
 import type { DashboardMenuProps } from './DashboardMenu.props';
 import { traverseNavItems } from './DashboardMenu.utils.tsx';
-import {
-  adminBottomMenuData,
-  dashboardBottomMenuData,
-  dashboardMenuData,
-} from './dashboard.menu.data.ts';
+import { dashboardMenuData } from './dashboard.menu.data.ts';
 
 const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   className,
@@ -26,12 +23,10 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   switch (variant) {
     case 'default': {
       items = dashboardMenuData;
-      bottomItems = dashboardBottomMenuData;
       break;
     }
 
     case 'admin': {
-      bottomItems = adminBottomMenuData;
       break;
     }
   }
@@ -48,14 +43,17 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
       <ul className={cn('flex-grow flex flex-col')}>
         {traverseNavItems(items ?? [])}
 
+        <Spacer />
+
         {bottomItems && bottomItems.length > 0 && (
           <>
-            <Spacer className={cn('bg-red-500/0')} />
             <Divider />
 
             {traverseNavItems(bottomItems ?? [])}
           </>
         )}
+
+        <AdminMenu variant={variant} />
       </ul>
     </nav>
   );
