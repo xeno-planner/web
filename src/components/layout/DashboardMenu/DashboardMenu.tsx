@@ -17,7 +17,6 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   className,
   items = dashboardMenuData,
   bottomItems = dashboardBottomMenuData,
-  // bottomItems = [],
   ...props
 }) => {
   return (
