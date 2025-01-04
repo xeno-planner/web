@@ -15,7 +15,7 @@ export const useFeatures = () => {
    * Checks if certain features are available for user.
    * @param features
    */
-  const featuresAvailable = (features?: AppFeature[]) => {
+  const featuresAvailable = (features?: AppFeature[]): boolean => {
     // Features are not requested
     if (!features) {
       return true;
