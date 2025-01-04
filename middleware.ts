@@ -48,6 +48,7 @@ export const config: MiddlewareConfig = {
     '/pomodoro',
     '/settings',
     '/tasks/(.*)',
+    '/admin/(.*)',
     '/time-blocking',
     '/auth/login',
     '/auth/register',
