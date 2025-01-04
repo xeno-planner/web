@@ -4,11 +4,16 @@ import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import TextOverflow from 'react-text-overflow';
 
 import styles from './DashboardMenuItem.module.scss';
 import type { DashboardMenuItemProps } from './DashboardMenuItem.props';
 
-const DashboardMenuItem: VariableFC<typeof Link, DashboardMenuItemProps> = ({
+const DashboardMenuItem: VariableFC<
+  typeof Link,
+  DashboardMenuItemProps,
+  'children'
+> = ({
   href,
   className,
   children,
@@ -59,7 +64,9 @@ const DashboardMenuItem: VariableFC<typeof Link, DashboardMenuItemProps> = ({
           />
         )}
 
-        <span className={cn(styles.linkText)}>{children}</span>
+        <span className={cn(styles.linkText, 'max-w-[13ch]')}>
+          <TextOverflow text={children ?? ''} />
+        </span>
       </Link>
     </li>
   );

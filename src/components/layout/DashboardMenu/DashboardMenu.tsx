@@ -2,17 +2,21 @@
 
 import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
-import { Shield } from 'lucide-react';
 
-import { dashboardMenuData } from '@/src/components/layout/DashboardMenu/dashboard.menu.data.ts';
-import DashboardMenuItem from '@/src/components/layout/DashboardMenuItem';
 import { Divider, Spacer } from '@/src/components/ui';
 
 import styles from './DashboardMenu.module.scss';
 import type { DashboardMenuProps } from './DashboardMenu.props';
+import { traverseNavItems } from './DashboardMenu.utils.tsx';
+import {
+  dashboardBottomMenuData,
+  dashboardMenuData,
+} from './dashboard.menu.data.ts';
 
 const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   className,
+  items = dashboardMenuData,
+  bottomItems = dashboardBottomMenuData,
   ...props
 }) => {
   return (
@@ -25,26 +29,12 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
       {...props}
     >
       <ul className={cn('flex-grow flex flex-col')}>
-        {dashboardMenuData.map(({ icon, href, children, ...props }, index) => (
-          <DashboardMenuItem
-            icon={icon}
-            href={href}
-            key={`[${index}] ${href.toString()}`}
-            {...props}
-          >
-            {children}
-          </DashboardMenuItem>
-        ))}
+        {traverseNavItems(items)}
 
         <Spacer className={cn('bg-red-500/0')} />
         <Divider />
 
-        <DashboardMenuItem
-          icon={Shield}
-          href={'/admin/dashboard'}
-        >
-          Admin
-        </DashboardMenuItem>
+        {traverseNavItems(bottomItems)}
       </ul>
     </nav>
   );

@@ -13,4 +13,6 @@ export interface DashboardMenuItemProps {
    * as tab control entry.
    */
   isTab?: boolean;
+
+  children?: string;
 }

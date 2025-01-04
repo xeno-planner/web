@@ -2,17 +2,18 @@ import {
   CalendarRange,
   LayoutDashboard,
   Settings,
+  Shield,
   SquareKanban,
   Timer,
 } from 'lucide-react';
 import { type ComponentProps } from 'react';
 
 import type DashboardMenuItem from '@/src/components/layout/DashboardMenuItem';
-import { DASHBOARD_PAGES } from '@/src/types/routes.ts';
+import { ADMIN_PAGES, DASHBOARD_PAGES } from '@/src/types/routes.ts';
 
-export const dashboardMenuData: Array<
-  ComponentProps<typeof DashboardMenuItem>
-> = [
+export type DashboardMenuData = Array<ComponentProps<typeof DashboardMenuItem>>;
+
+export const dashboardMenuData: DashboardMenuData = [
   {
     icon: LayoutDashboard,
     href: DASHBOARD_PAGES.HOME,
@@ -42,6 +43,15 @@ export const dashboardMenuData: Array<
     icon: Settings,
     href: DASHBOARD_PAGES.SETTINGS,
     children: 'Настройки',
+    'aria-disabled': false,
+  },
+];
+
+export const dashboardBottomMenuData: DashboardMenuData = [
+  {
+    icon: Shield,
+    href: ADMIN_PAGES.DASHBOARD,
+    children: 'Панель админа',
     'aria-disabled': false,
   },
 ];
