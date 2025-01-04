@@ -25,7 +25,8 @@
     "lint-staged": "lint-staged",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy": "sh ./.dev/sh/deploy.sh"
+    "deploy": "sh ./.dev/sh/deploy.sh",
+    "backend": "esno ./.dev/scripts/run-backend.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
@@ -104,6 +105,7 @@
     "eslint": "^8.57.0",
     "eslint-config-xeno": "^0.2.3",
     "eslint-plugin-storybook": "^0.8.0",
+    "esno": "^4.8.0",
     "husky": "^9.0.11",
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.5",
@@ -111,6 +113,7 @@
     "postcss": "^8",
     "prettier": "^3.3.2",
     "sass": "^1.77.4",
+    "shelljs": "^0.8.5",
     "start-server-and-test": "^2.0.3",
     "storybook": "^8.1.6",
     "stylelint": "^16.6.1",
