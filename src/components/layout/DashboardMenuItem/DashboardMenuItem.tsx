@@ -1,6 +1,5 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
 import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import Link from 'next/link';
@@ -9,7 +8,7 @@ import { useCallback } from 'react';
 import TextOverflow from 'react-text-overflow';
 
 import CircleLoader from '@/src/components/ui/CircleLoader';
-import { FeatureService } from '@/src/services/feature.service.ts';
+import { useFeatures } from '@/src/hooks/useFeatures.ts';
 
 import styles from './DashboardMenuItem.module.scss';
 import type { DashboardMenuItemProps } from './DashboardMenuItem.props';
@@ -31,10 +30,7 @@ const DashboardMenuItem: VariableFC<
 }) => {
   const pathname = usePathname();
 
-  const { data: isAvailable, isLoading } = useQuery({
-    queryKey: ['request features', 'for', href.toString()],
-    queryFn: () => FeatureService.featuresAvailable(reliesOn),
-  });
+  const { isLoading, featuresAvailable } = useFeatures();
 
   const isActive = (): boolean => {
     if (href === '/') {
@@ -51,7 +47,7 @@ const DashboardMenuItem: VariableFC<
 
   const tabSize = useCallback(() => (isTab ? '1.1em' : '1.33em'), []);
 
-  if (!isAvailable) {
+  if (!featuresAvailable(reliesOn)) {
     return false;
   }
 

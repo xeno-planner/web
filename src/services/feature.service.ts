@@ -23,22 +23,4 @@ export class FeatureService {
       canAccessAdminPage,
     };
   }
-
-  // Checks all urls for availability
-  static async featuresAvailable(features?: AppFeature[]) {
-    // No one feature is required
-    if (!features) {
-      return true;
-    }
-
-    const userAvailableFeatures = await this.getFeatures();
-
-    for (const feat of features) {
-      if (!userAvailableFeatures[feat]) {
-        return false;
-      }
-    }
-
-    return true;
-  }
 }
