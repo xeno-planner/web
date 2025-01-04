@@ -5,6 +5,9 @@ export interface AsChild {
   asChild?: boolean;
 }
 
+export type SlotProps<TComp extends ElementType, TProps> = TProps &
+  WithComp<TComp>;
+
 export type CompType<TComp extends ElementType> = typeof Slot | TComp;
 
 export interface WithComp<TComp extends ElementType> {

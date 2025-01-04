@@ -1,7 +1,7 @@
 import { Slot } from '@radix-ui/react-slot';
 import type { ElementType, ReactNode } from 'react';
 
-import type { AsChild, WithComp } from './slotable.types';
+import type { AsChild, SlotProps } from './slotable.types';
 
 /**
  * HOC for creating slotable components (powered by ``@radix-ui/react-slot``).
@@ -20,12 +20,17 @@ import type { AsChild, WithComp } from './slotable.types';
  */
 export function slotable<TComp extends ElementType, TProps = unknown>(
   baseComp: TComp,
-  slot: (props: TProps & WithComp<TComp>) => ReactNode,
+  slot: (props: SlotProps<TComp, TProps>) => ReactNode,
 ) {
   return ({ asChild, ...props }: TProps & AsChild) => {
     const Comp = asChild ? Slot : baseComp;
 
-    // @ts-expect-error Types are inferred incorrectly
-    return slot({ Comp, ...props });
+    // Bring in proper typing
+    const payloadProps = {
+      Comp,
+      ...props,
+    } as SlotProps<TComp, TProps>;
+
+    return slot(payloadProps);
   };
 }
