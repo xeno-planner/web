@@ -1,3 +1,4 @@
+import { transliterate } from '@xenopomp/advanced-utils';
 import { kebabCase } from 'change-case';
 import type { MDXComponents } from 'mdx/types';
 
@@ -11,7 +12,10 @@ const getHeadingComponents = () => {
     components[`h${i}`] = ({ children }) => (
       <HtmlHeading
         as={`h${i as 1 | 2 | 3 | 4 | 5}`}
-        id={kebabCase(children)}
+        id={kebabCase(
+          typeof children === 'string' ? transliterate(children) : children,
+        )}
+        anchor
       >
         {children}
       </HtmlHeading>

@@ -13,4 +13,20 @@
   }
 
   @include headingLevels(1, 2, 3, 4, 5);
+
+  &.anchor {
+    @apply flex items-center gap-[.25ch];
+
+    cursor: pointer;
+
+    &:not(:hover) {
+      .icon {
+        display: none;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
