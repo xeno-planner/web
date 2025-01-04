@@ -98,7 +98,7 @@
     "@vercel/speed-insights": "^1.0.10",
     "@vitejs/plugin-react": "^4.3.0",
     "@vitest/coverage-istanbul": "^1.6.0",
-    "@xeno-planner/backend-types": "^1.0.0",
+    "@xeno-planner/backend-types": "^1.0.1",
     "@xenopomp/advanced-types": "^2.0.2",
     "concurrently": "^8.2.2",
     "cypress": "^13.9.0",
