@@ -2,9 +2,11 @@
 
 import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import { Shield } from 'lucide-react';
 
 import { dashboardMenuData } from '@/src/components/layout/DashboardMenu/dashboard.menu.data.ts';
 import DashboardMenuItem from '@/src/components/layout/DashboardMenuItem';
+import { Divider, Spacer } from '@/src/components/ui';
 
 import styles from './DashboardMenu.module.scss';
 import type { DashboardMenuProps } from './DashboardMenu.props';
@@ -16,13 +18,13 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
   return (
     <nav
       className={cn(
-        'flex-grow overflow-y-auto select-none',
+        'flex-grow flex overflow-y-auto select-none',
         styles.menu,
         className,
       )}
       {...props}
     >
-      <ul>
+      <ul className={cn('flex-grow flex flex-col')}>
         {dashboardMenuData.map(({ icon, href, children, ...props }, index) => (
           <DashboardMenuItem
             icon={icon}
@@ -33,6 +35,16 @@ const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
             {children}
           </DashboardMenuItem>
         ))}
+
+        <Spacer className={cn('bg-red-500/0')} />
+        <Divider />
+
+        <DashboardMenuItem
+          icon={Shield}
+          href={'/admin/dashboard'}
+        >
+          Admin
+        </DashboardMenuItem>
       </ul>
     </nav>
   );
