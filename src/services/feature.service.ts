@@ -21,7 +21,6 @@ export class FeatureService {
 
     return {
       canAccessAdminPage,
-      canVisit: false,
     };
   }
 
