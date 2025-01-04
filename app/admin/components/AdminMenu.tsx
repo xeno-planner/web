@@ -22,10 +22,9 @@ const AdminMenu: FC<Pick<ComponentProps<typeof DashboardMenu>, 'variant'>> = ({
 
   return (
     <>
-      <Divider />
-
       {isLoading ? (
         <>
+          <Divider />
           <div
             aria-hidden
             className={cn('flex-center py-[1rem]')}
@@ -37,6 +36,8 @@ const AdminMenu: FC<Pick<ComponentProps<typeof DashboardMenu>, 'variant'>> = ({
 
       {canAccess ? (
         <>
+          <Divider />
+
           {traverseNavItems(
             variant === 'admin' ? adminBottomMenuData : dashboardBottomMenuData,
           )}
