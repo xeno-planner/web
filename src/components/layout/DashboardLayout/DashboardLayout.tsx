@@ -9,10 +9,11 @@ import type { DashboardLayoutProps } from './DashboardLayout.props';
 
 const DashboardLayout: FC<PropsWith<'children', DashboardLayoutProps>> = ({
   children,
+  variant = 'default',
 }) => {
   return (
     <div className={cn(styles.wrapper)}>
-      <DashboardSidebar />
+      <DashboardSidebar variant={variant} />
 
       {children}
     </div>

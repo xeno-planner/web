@@ -7,12 +7,12 @@ import Logo from '@/src/components/ui/Logo';
 import styles from './DashboardSidebar.module.scss';
 import type { DashboardSidebarProps } from './DashboardSidebar.props';
 
-const DashboardSidebar: FC<DashboardSidebarProps> = () => {
+const DashboardSidebar: FC<DashboardSidebarProps> = ({ variant }) => {
   return (
     <aside className={cn(styles.sidebar)}>
       <Logo className={cn(styles.logo)} />
 
-      <DashboardMenu />
+      <DashboardMenu variant={variant} />
     </aside>
   );
 };
