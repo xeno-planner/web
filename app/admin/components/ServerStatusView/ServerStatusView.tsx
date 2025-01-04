@@ -40,8 +40,6 @@ const ServerStatusView: FC<ServerStatusViewProps> = ({
       </header>
 
       <Spacer />
-
-      <div>Sus</div>
     </StatCell>
   );
 };
