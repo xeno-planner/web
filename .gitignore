@@ -11,6 +11,10 @@ lerna-debug.log*
 .idea/*
 # Add custom project icon to repo
 !.idea/icon.svg
+!.idea/runConfigurations
+
+# MacOS
+.DS_Store
 
 .vscode/*
 
