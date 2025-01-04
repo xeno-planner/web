@@ -1,6 +1,5 @@
 import cn from 'classnames';
 import { Link as LinkIcon } from 'lucide-react';
-import Link from 'next/link';
 import { type ComponentProps, type FC } from 'react';
 
 import styles from './HtmlHeading.module.scss';
@@ -14,25 +13,25 @@ const HtmlHeading: FC<HtmlHeadingProps & ComponentProps<'h1'>> = ({
   ...props
 }) => {
   return (
-    <Link href={`#${props.id ?? ''}`}>
-      <HeadingComponent
-        className={cn(
-          styles.heading,
-          {
-            [`${styles.anchor}`]: anchor,
-          },
-          className,
-        )}
-        {...props}
-      >
-        {children}
+    <HeadingComponent
+      className={cn(
+        styles.heading,
+        {
+          [`${styles.anchor}`]: anchor,
+        },
+        className,
+      )}
+      {...props}
+    >
+      {children}
 
+      {anchor && (
         <LinkIcon
           className={cn('float-end', styles.icon)}
           size={'1rem'}
         />
-      </HeadingComponent>
-    </Link>
+      )}
+    </HeadingComponent>
   );
 };
 
