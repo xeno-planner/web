@@ -101,7 +101,7 @@
     "@xeno-planner/backend-types": "^1.0.2-canary.1",
     "@xenopomp/advanced-types": "^2.0.2",
     "concurrently": "^8.2.2",
-    "cypress": "^13.9.0",
+    "cypress": "^14.0.1",
     "eslint": "^8.57.0",
     "eslint-config-xeno": "^0.2.3",
     "eslint-plugin-storybook": "^0.8.0",
