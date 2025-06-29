@@ -1,4 +1,4 @@
-import type { SetState } from '@xenopomp/advanced-types';
+import type { SetState } from 'xenopomp-essentials';
 
 import type { IPomodoroRoundResponse } from '@/src/types';
 

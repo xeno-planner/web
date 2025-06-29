@@ -102,11 +102,12 @@
     "@xenopomp/advanced-types": "^2.0.2",
     "concurrently": "^8.2.2",
     "cypress": "^13.9.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.30.0",
     "eslint-config-xeno": "^0.2.3",
     "eslint-plugin-storybook": "^0.8.0",
     "esno": "^4.8.0",
     "husky": "^9.0.11",
+    "jiti": "^2.4.2",
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.5",
     "next-metrika": "^1.0.3",
@@ -129,6 +130,7 @@
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0",
     "vitest-matchmedia-mock": "^1.0.5",
-    "webpack": "^5.97.1"
+    "webpack": "^5.97.1",
+    "xenopomp-essentials": "^0.2.0"
   }
 }
