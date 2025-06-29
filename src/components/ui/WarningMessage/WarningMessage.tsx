@@ -1,10 +1,10 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { TriangleAlert } from 'lucide-react';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import type { WarningMessageProps } from './WarningMessage.props';
 
-const WarningMessage: VariableFC<'div', WarningMessageProps, 'role'> = ({
+const WarningMessage: VariableFC.Legacy<'div', WarningMessageProps, 'role'> = ({
   className,
   children,
   ...props

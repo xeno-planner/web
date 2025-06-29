@@ -1,7 +1,7 @@
 'use client';
 
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import { AdminMenu } from '@/app/admin/components';
 import { Divider, Spacer } from '@/src/components/ui';
@@ -11,13 +11,11 @@ import type { DashboardMenuProps } from './DashboardMenu.props';
 import { traverseNavItems } from './DashboardMenu.utils.tsx';
 import { adminMenuData, dashboardMenuData } from './dashboard.menu.data.ts';
 
-const DashboardMenu: VariableFC<'nav', DashboardMenuProps, 'children'> = ({
-  className,
-  items,
-  bottomItems,
-  variant = 'default',
-  ...props
-}) => {
+const DashboardMenu: VariableFC.Legacy<
+  'nav',
+  DashboardMenuProps,
+  'children'
+> = ({ className, items, bottomItems, variant = 'default', ...props }) => {
   // Setup default items
 
   switch (variant) {

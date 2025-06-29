@@ -1,11 +1,11 @@
 'use client';
 
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
 import TextOverflow from 'react-text-overflow';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import CircleLoader from '@/src/components/ui/CircleLoader';
 import { useFeatures } from '@/src/hooks/useFeatures.ts';
@@ -13,7 +13,7 @@ import { useFeatures } from '@/src/hooks/useFeatures.ts';
 import styles from './DashboardMenuItem.module.scss';
 import type { DashboardMenuItemProps } from './DashboardMenuItem.props';
 
-const DashboardMenuItem: VariableFC<
+const DashboardMenuItem: VariableFC.Legacy<
   typeof Link,
   DashboardMenuItemProps,
   'children'

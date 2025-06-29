@@ -1,5 +1,4 @@
-import type { PropsWith } from '@xenopomp/advanced-types';
-import { type FC } from 'react';
+import { type FC, PropsWithChildren } from 'react';
 
 import type { ProdPortalProps } from './ProdPortal.props';
 
@@ -11,7 +10,7 @@ import type { ProdPortalProps } from './ProdPortal.props';
  * @param target
  * @constructor
  */
-const ProdPortal: FC<PropsWith<'children', ProdPortalProps>> = ({
+const ProdPortal: FC<PropsWithChildren<ProdPortalProps>> = ({
   children,
   target,
 }) => {

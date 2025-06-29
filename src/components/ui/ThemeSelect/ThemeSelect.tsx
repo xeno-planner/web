@@ -1,9 +1,9 @@
 'use client';
 
-import type { VariableFC } from '@xenopomp/advanced-types';
 import { getObjectEntries } from '@xenopomp/advanced-utils';
 import { Laptop, Moon, Palette, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import SelectField from '@/src/components/ui/SelectField';
 import type { Selection } from '@/src/components/ui/SelectField/SelectField.props';
@@ -46,7 +46,7 @@ const data: Record<string, Omit<Selection, 'value'>> = {
  *   );
  * };
  */
-const ThemeSelect: VariableFC<
+const ThemeSelect: VariableFC.Legacy<
   typeof SelectField,
   ThemeSelectProps,
   'icon' | 'placeholder' | 'currentItem' | 'items' | 'onSelection'

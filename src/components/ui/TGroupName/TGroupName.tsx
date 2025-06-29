@@ -1,12 +1,12 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import HtmlHeading from '@/src/components/ui/Heading';
 import { columnType } from '@/src/components/ui/TaskTable/TaskTable.tsx';
 
 import type { TGroupNameProps } from './TGroupName.props';
 
-const TGroupName: VariableFC<'th', TGroupNameProps> = ({
+const TGroupName: VariableFC.Legacy<'th', TGroupNameProps> = ({
   className,
   children,
   ...props

@@ -1,13 +1,13 @@
-import { type PropsWith } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import type { CSSProperties, FC } from 'react';
 
-import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
+import UiContainer, {
+  MutatedProps,
+} from '@/src/components/ui/UiContainer/UiContainer';
 
 import type { UiGridProps } from './UiGrid.props';
 
-interface UiGridNestedProps
-  extends PropsWith<'children' | 'className' | 'id' | 'style', UiGridProps> {}
+interface UiGridNestedProps extends MutatedProps, UiGridProps {}
 
 const getInlineStyles = ({
   columns,

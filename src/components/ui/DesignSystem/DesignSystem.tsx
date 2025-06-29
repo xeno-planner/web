@@ -1,7 +1,7 @@
-import type { PropsWith, VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { Geologica } from 'next/font/google';
-import { type ComponentProps, type FC } from 'react';
+import { type ComponentProps, type FC, PropsWithChildren } from 'react';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import HtmlHeading from '@/src/components/ui/Heading';
 
@@ -11,10 +11,10 @@ import type { DesignSystemProps } from './DesignSystem.props';
 const font = Geologica({ subsets: ['latin', 'cyrillic'] });
 
 const WithHeading: FC<
-  PropsWith<
-    'children',
-    { heading?: string; headingType?: ComponentProps<typeof HtmlHeading>['as'] }
-  >
+  PropsWithChildren<{
+    heading?: string;
+    headingType?: ComponentProps<typeof HtmlHeading>['as'];
+  }>
 > = ({ children, heading, headingType = 'h2' }) => {
   return (
     <>
@@ -24,7 +24,7 @@ const WithHeading: FC<
   );
 };
 
-const Section: VariableFC<typeof WithHeading, {}> = ({
+const Section: VariableFC.Legacy<typeof WithHeading, {}> = ({
   heading,
   headingType = 'h2',
   children,
@@ -41,7 +41,7 @@ const Section: VariableFC<typeof WithHeading, {}> = ({
   );
 };
 
-const SubSection: VariableFC<typeof WithHeading, {}> = ({
+const SubSection: VariableFC.Legacy<typeof WithHeading, {}> = ({
   heading,
   headingType = 'h3',
   children,
@@ -58,7 +58,7 @@ const SubSection: VariableFC<typeof WithHeading, {}> = ({
   );
 };
 
-const List: FC<PropsWith<'children', {}>> = ({ children }) => {
+const List: FC<PropsWithChildren> = ({ children }) => {
   return <ul className={cn(styles.list)}>{children}</ul>;
 };
 

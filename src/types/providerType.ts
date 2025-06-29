@@ -1,5 +1,4 @@
-import type { PropsWith } from '@xenopomp/advanced-types';
-import { type FC } from 'react';
+import { type FC, PropsWithChildren } from 'react';
 
 /** Type for any provider component. */
-export type ProviderType<T = {}> = FC<PropsWith<'children', T>>;
+export type ProviderType<T = {}> = FC<PropsWithChildren<T>>;

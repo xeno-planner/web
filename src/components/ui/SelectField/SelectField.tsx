@@ -1,11 +1,11 @@
 'use client';
 
 import { type Priority } from '@xeno-planner/backend-types';
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { type ComponentProps, useEffect } from 'react';
 import useSmoothScroll from 'react-smooth-scroll-hook';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import ColorBadge from '@/src/components/ui/ColorBadge';
 import InputField from '@/src/components/ui/InputField';
@@ -15,7 +15,7 @@ import { useOutSide } from '@/src/hooks/useOutSide.ts';
 import styles from './SelectField.module.scss';
 import type { SelectFieldProps, SelectFieldType } from './SelectField.props';
 
-const SelectField: VariableFC<
+const SelectField: VariableFC.Legacy<
   typeof InputField,
   SelectFieldProps,
   'children' | 'outerRef' | 'focused' | 'type'

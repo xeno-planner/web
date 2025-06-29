@@ -1,8 +1,8 @@
 'use client';
 
 import { DragDropContext } from '@hello-pangea/dnd';
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import { useTaskDnd } from '@/app/(dashboard)/tasks/hooks/useTaskDnd.ts';
 import { useTasks } from '@/app/(dashboard)/tasks/hooks/useTasks.ts';
@@ -52,7 +52,7 @@ export const columnType = (type: 'grip' | 'group' | 'add' | 'grip-row') => {
   }
 };
 
-const TaskTable: VariableFC<'table', TaskTableProps, 'children'> = ({
+const TaskTable: VariableFC.Legacy<'table', TaskTableProps, 'children'> = ({
   className,
   ...props
 }) => {

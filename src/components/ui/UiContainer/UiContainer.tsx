@@ -1,15 +1,16 @@
-import { type PropsWith } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import type { CSSProperties, FC } from 'react';
+import { FCProps, VariableFC } from 'xenopomp-essentials';
 
 import styles from './UiContainer.module.scss';
 import type { UiContainerProps } from './UiContainer.props';
 
-interface UiContainerNestedProps
-  extends PropsWith<
-    'children' | 'className' | 'id' | 'style',
-    UiContainerProps
-  > {}
+export type MutatedProps = Pick<
+  FCProps<VariableFC.Legacy<'div'>>,
+  'children' | 'className' | 'id' | 'style'
+>;
+
+interface UiContainerNestedProps extends MutatedProps, UiContainerProps {}
 
 const UiContainer: FC<UiContainerNestedProps> = ({
   children,

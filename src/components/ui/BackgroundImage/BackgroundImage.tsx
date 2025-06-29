@@ -1,6 +1,6 @@
-import { type VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import Image from 'next/image';
+import { type VariableFC } from 'xenopomp-essentials';
 
 import { type BackgroundImageProps } from './BackgroundImage.props';
 
@@ -14,7 +14,7 @@ import { type BackgroundImageProps } from './BackgroundImage.props';
  * @param props
  * @constructor
  */
-const BackgroundImage: VariableFC<
+const BackgroundImage: VariableFC.Legacy<
   typeof Image,
   BackgroundImageProps,
   'children'

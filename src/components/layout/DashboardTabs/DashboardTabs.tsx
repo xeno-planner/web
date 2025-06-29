@@ -1,13 +1,12 @@
-import type { PropsWith } from '@xenopomp/advanced-types';
 import cn from 'classnames';
-import type { FC } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 
 import SettingGroup from '@/src/components/layout/SettingGroup';
 
 import styles from './DashboardTabs.module.scss';
 import type { DashboardTabsProps } from './DashboardTabs.props';
 
-const DashboardTabs: FC<PropsWith<'children', DashboardTabsProps>> = ({
+const DashboardTabs: FC<PropsWithChildren<DashboardTabsProps>> = ({
   children,
 }) => {
   return (

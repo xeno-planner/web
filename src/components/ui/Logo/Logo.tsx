@@ -1,8 +1,8 @@
-import type { Defined, VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { SquareGanttChart } from 'lucide-react';
 import Link from 'next/link';
 import { type ComponentProps } from 'react';
+import type { Defined, VariableFC } from 'xenopomp-essentials';
 
 import { AppConstants } from '@/app/app.constants.ts';
 import packageJson from '@/package.json';
@@ -11,7 +11,7 @@ import { parseVersion } from '@/src/utils/misc';
 import styles from './Logo.module.scss';
 import type { LogoProps } from './Logo.props';
 
-const Logo: VariableFC<typeof Link, LogoProps, 'children' | 'href'> = ({
+const Logo: VariableFC.Legacy<typeof Link, LogoProps, 'children' | 'href'> = ({
   className,
   variant = 'sidebar',
   preid = true,

@@ -1,7 +1,7 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
-const Spacer: VariableFC<'div', unknown, 'children'> = ({
+const Spacer: VariableFC.Legacy<'div', unknown, 'children'> = ({
   className,
   'aria-hidden': ariaHidden = true,
   ...props

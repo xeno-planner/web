@@ -1,4 +1,4 @@
-import type { AsyncReturnType } from '@xenopomp/advanced-types';
+import type { AsyncReturnType } from 'xenopomp-essentials';
 
 import { axiosWithAuth } from '@/src/api/interceptors.ts';
 

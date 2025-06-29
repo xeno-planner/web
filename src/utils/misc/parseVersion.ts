@@ -1,4 +1,4 @@
-import type { Nullable } from '@xenopomp/advanced-types';
+import type { Nullable } from 'xenopomp-essentials';
 
 export type Preid = 'alpha' | 'beta' | 'rc';
 

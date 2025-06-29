@@ -1,12 +1,13 @@
-import type { Defined, PropsWith, VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import { PropsWithChildren } from 'react';
+import type { Defined, VariableFC } from 'xenopomp-essentials';
 
 import styles from './Button.module.scss';
 import type { ButtonProps } from './Button.props';
 
-const Button: VariableFC<
+const Button: VariableFC.Legacy<
   'button',
-  PropsWith<'children', ButtonProps>,
+  PropsWithChildren<ButtonProps>,
   'children'
 > = ({
   className,

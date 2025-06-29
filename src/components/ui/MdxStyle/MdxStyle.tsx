@@ -1,10 +1,10 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import styles from './MdxStyle.module.scss';
 import type { MdxStyleProps } from './MdxStyle.props';
 
-const MdxStyle: VariableFC<'div', MdxStyleProps> = ({
+const MdxStyle: VariableFC.Legacy<'div', MdxStyleProps> = ({
   children,
   className,
   type = 'changelog',

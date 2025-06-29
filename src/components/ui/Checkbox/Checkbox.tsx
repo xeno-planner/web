@@ -1,11 +1,11 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { Check } from 'lucide-react';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import styles from './Checkbox.module.scss';
 import type { CheckboxProps } from './Checkbox.props';
 
-const Checkbox: VariableFC<'input', CheckboxProps, 'type'> = ({
+const Checkbox: VariableFC.Legacy<'input', CheckboxProps, 'type'> = ({
   className,
   children,
   editable,

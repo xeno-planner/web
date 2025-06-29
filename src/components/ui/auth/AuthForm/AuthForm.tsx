@@ -1,14 +1,14 @@
 'use client';
 
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import HtmlHeading from '@/src/components/ui/Heading';
 
 import styles from './AuthForm.module.scss';
 import type { AuthFormProps } from './AuthForm.props';
 
-const AuthForm: VariableFC<'form', AuthFormProps> = ({
+const AuthForm: VariableFC.Legacy<'form', AuthFormProps> = ({
   onSubmit,
   className,
   children,

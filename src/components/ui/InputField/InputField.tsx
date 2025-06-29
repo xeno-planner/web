@@ -1,11 +1,11 @@
 'use client';
 
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { Eye, EyeOff } from 'lucide-react';
 import { type HTMLInputTypeAttribute, useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import TextOverflow from 'react-text-overflow';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import { useUniqueId } from '@/src/hooks/useUniqueId';
 
@@ -13,7 +13,7 @@ import styles from './InputField.module.scss';
 import type { InputFieldProps } from './InputField.props';
 import InputWrapper from './InputWrapper.tsx';
 
-const InputField: VariableFC<'input', InputFieldProps> = ({
+const InputField: VariableFC.Legacy<'input', InputFieldProps> = ({
   className,
   id,
   icon: Icon,

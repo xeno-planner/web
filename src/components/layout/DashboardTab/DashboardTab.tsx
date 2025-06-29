@@ -1,11 +1,11 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import DashboardMenuItem from '@/src/components/layout/DashboardMenuItem';
 
 import type { DashboardTabProps } from './DashboardTab.props';
 
-const DashboardTab: VariableFC<
+const DashboardTab: VariableFC.Legacy<
   typeof DashboardMenuItem,
   DashboardTabProps,
   'isTab'

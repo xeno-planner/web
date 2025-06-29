@@ -1,10 +1,10 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import Link from 'next/link';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import styles from './Actions.module.scss';
 
-export const FormActions: VariableFC<'footer', {}> = ({
+export const FormActions: VariableFC.Legacy<'footer', {}> = ({
   className,
   children,
   ...props

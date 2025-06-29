@@ -1,11 +1,11 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { type ComponentProps } from 'react';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import type InputField from '@/src/components/ui/InputField';
 import WarningMessage from '@/src/components/ui/WarningMessage';
 
-const InputWrapper: VariableFC<
+const InputWrapper: VariableFC.Legacy<
   'div',
   Pick<ComponentProps<typeof InputField>, 'warning'>
 > = ({

@@ -1,6 +1,6 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { useMemo } from 'react';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import { type Color } from '@/app/(dashboard)/time-blocking/form/colors.data.ts';
 import PriorityBadge from '@/src/components/ui/PriorityBadge';
@@ -8,7 +8,7 @@ import { htmlColors } from '@/src/data/html.colors.ts';
 
 import type { ColorBadgeProps } from './ColorBadge.props';
 
-const ColorBadge: VariableFC<
+const ColorBadge: VariableFC.Legacy<
   typeof PriorityBadge,
   ColorBadgeProps & { children?: Color },
   'priority' | 'children'

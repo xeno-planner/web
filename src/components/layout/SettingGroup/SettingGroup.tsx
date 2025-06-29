@@ -1,7 +1,7 @@
 'use client';
 
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import Button from '@/src/components/ui/Button';
 import HtmlHeading from '@/src/components/ui/Heading';
@@ -11,7 +11,7 @@ import { SETTING_GROUP_SIZE } from '@/src/constants/fields.constants.ts';
 import styles from './SettingGroup.module.scss';
 import type { SettingGroupProps } from './SettingGroup.props';
 
-const SettingGroup: VariableFC<'article', SettingGroupProps> = ({
+const SettingGroup: VariableFC.Legacy<'article', SettingGroupProps> = ({
   className,
   children,
   heading,

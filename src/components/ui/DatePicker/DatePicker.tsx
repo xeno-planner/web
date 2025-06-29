@@ -1,4 +1,3 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { ru } from 'date-fns/locale';
 import dayjs from 'dayjs';
@@ -6,6 +5,7 @@ import LocalizedFormat from 'dayjs/plugin/localizedFormat';
 import { useState } from 'react';
 import { DayPicker, type SelectSingleEventHandler } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import { useOutSide } from '@/src/hooks/useOutSide.ts';
 
@@ -15,13 +15,11 @@ import { formatCaption } from './DatePickerCaption.tsx';
 dayjs.extend(LocalizedFormat);
 dayjs.locale('ru');
 
-const DatePicker: VariableFC<'div', DatePickerProps, 'onChange' | 'ref'> = ({
-  onChange,
-  value,
-  position,
-  className,
-  ...props
-}) => {
+const DatePicker: VariableFC.Legacy<
+  'div',
+  DatePickerProps,
+  'onChange' | 'ref'
+> = ({ onChange, value, position, className, ...props }) => {
   const [selected, setSelected] = useState<Date>();
   const { ref, isShown, setIsShown } = useOutSide<HTMLDivElement>();
 
