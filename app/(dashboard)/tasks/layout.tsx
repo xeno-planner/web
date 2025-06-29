@@ -1,7 +1,6 @@
-import type { PropsWith } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import type { Metadata } from 'next';
-import { type FC } from 'react';
+import { type FC, PropsWithChildren } from 'react';
 
 import DashboardHeader from '@/src/components/layout/DashboardHeader';
 import TasksTabControl from '@/src/components/ui/TasksTabControl';
@@ -23,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const TaskPageLayout: FC<PropsWith<'children', {}>> = ({ children }) => {
+const TaskPageLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <main className={cn(styles.layout)}>
       <DashboardHeader heading={'Задачи'} />

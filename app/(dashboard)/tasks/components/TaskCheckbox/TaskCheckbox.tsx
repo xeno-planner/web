@@ -1,4 +1,4 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import Checkbox from '@/src/components/ui/Checkbox';
 

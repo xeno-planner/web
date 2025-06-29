@@ -1,7 +1,7 @@
 'use client';
 
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import { useTimer } from '@/app/(dashboard)/pomodoro/hooks/useTimer.ts';
 import { useTimerActions } from '@/app/(dashboard)/pomodoro/hooks/useTimerActions.ts';

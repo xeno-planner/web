@@ -1,8 +1,8 @@
-import type { WithSearchParams } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { type Metadata } from 'next';
 import { QRCodeSVG } from 'qrcode.react';
 import { type FC, useCallback } from 'react';
+import type { NextSearchParams } from 'xenopomp-essentials';
 
 import { generateQrCodeUrl } from '@/app/(landing)/share/generateQrCodeUrl.ts';
 import LandingLayout from '@/src/components/layout/landing/LandingLayout';
@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const SharePage: FC<WithSearchParams<{}, 'route'>> = ({ searchParams }) => {
+const SharePage: FC<NextSearchParams<'route'>> = ({ searchParams }) => {
   const CANONICAL = process.env.CANONICAL_URL;
 
   const getQrUrl = useCallback(

@@ -1,6 +1,6 @@
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { type LucideIcon, Trash } from 'lucide-react';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import { useDeleteTask } from '@/app/(dashboard)/tasks/hooks/useDeleteTask.ts';
 

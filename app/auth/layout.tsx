@@ -1,7 +1,6 @@
-import type { PropsWith } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import type { Metadata } from 'next';
-import { type FC } from 'react';
+import { type FC, PropsWithChildren } from 'react';
 
 import Overlay from '@/src/components/ui/Overlay/Overlay.tsx';
 import { NO_INDEX_PAGE } from '@/src/constants/seo.constants.ts';
@@ -24,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const AuthLayout: FC<PropsWith<'children', {}>> = ({ children }) => {
+const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <main className={cn('h-dvh flex-center p-[1rem]')}>
       <Overlay

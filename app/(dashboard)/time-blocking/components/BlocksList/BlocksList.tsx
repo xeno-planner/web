@@ -3,8 +3,8 @@ import {
   SortableContext,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import TimeBlockEntry from '@/app/(dashboard)/time-blocking/components/TimeBlockEntry';
 import { useTimeBlockDnd } from '@/app/(dashboard)/time-blocking/hooks/useTimeBlockDnd.ts';

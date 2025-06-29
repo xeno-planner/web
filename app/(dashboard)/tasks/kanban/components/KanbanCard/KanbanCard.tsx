@@ -1,7 +1,7 @@
 import { Draggable } from '@hello-pangea/dnd';
-import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { useForm } from 'react-hook-form';
+import type { VariableFC } from 'xenopomp-essentials';
 
 import TaskBadgeSelect from '@/app/(dashboard)/tasks/components/TaskBadgeSelect';
 import TaskCheckbox from '@/app/(dashboard)/tasks/components/TaskCheckbox';

@@ -1,5 +1,5 @@
-import type { Defined } from '@xenopomp/advanced-types';
 import { type useFormContext } from 'react-hook-form';
+import type { Defined } from 'xenopomp-essentials';
 
 import type { TimeBlockFormStateType } from '@/src/types';
 
