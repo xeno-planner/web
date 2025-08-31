@@ -19,6 +19,7 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  output: 'standalone',
 };
 
 module.exports = withMDX(nextConfig);
