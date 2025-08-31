@@ -19,7 +19,7 @@ export const FormActions: VariableFC.Legacy<'footer', {}> = ({
   );
 };
 
-export const FormLink: VariableFC<typeof Link, {}> = ({
+export const FormLink: VariableFC.Legacy<typeof Link, {}> = ({
   className,
   children,
   ...props

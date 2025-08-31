@@ -29,21 +29,9 @@ export const useAuthForm = <TForm extends AuthType = IAuthForm>(
         password,
       }),
     onSuccess() {
-      switch (type) {
-        case 'login': {
-          toast.success('Вы вошли успешно!');
-          hookForm.reset();
-          push(DASHBOARD_PAGES.HOME);
-          break;
-        }
-
-        case 'register': {
-          toast.success('Письмо подтверждения было отправлено на вашу почту.');
-          hookForm.reset();
-          push(AUTH_PAGES.LOGIN);
-          break;
-        }
-      }
+      toast.success('Вы вошли успешно!');
+      hookForm.reset();
+      push(DASHBOARD_PAGES.HOME);
     },
     onError(err: AxiosError) {
       const responseStatus = err.response?.status;
