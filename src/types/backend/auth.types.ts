@@ -1,7 +1,7 @@
 import type { User } from '@xeno-planner/backend-types';
 
 /** Auth form dto type. */
-export interface IAuthForm extends Pick<User, 'email' | 'password'> {}
+export interface IAuthForm extends Pick<User, 'login' | 'password'> {}
 
 /**
  * This interface only exists to handle
