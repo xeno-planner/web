@@ -39,7 +39,7 @@ const CommonFields: FC<ICommonFields> = ({
             icon={CircleUserRound}
             description={'Поле ввода логина'}
             placeholder={'Логин'}
-            type={'email'}
+            type={'text'}
             warning={error?.message}
             {...field}
           />
