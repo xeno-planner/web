@@ -23,9 +23,9 @@ export const useAuthForm = <TForm extends AuthType = IAuthForm>(
 
   const { mutate } = useMutation({
     mutationKey: ['auth', type],
-    mutationFn: ({ email, password }: TForm) =>
+    mutationFn: ({ login, password }: TForm) =>
       AuthService.main(type, {
-        email,
+        login,
         password,
       }),
     onSuccess() {

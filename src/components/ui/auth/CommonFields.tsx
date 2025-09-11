@@ -1,4 +1,4 @@
-import { KeyRound, Mail } from 'lucide-react';
+import { CircleUserRound, KeyRound } from 'lucide-react';
 import { type FC } from 'react';
 import { type Control, Controller } from 'react-hook-form';
 
@@ -30,15 +30,15 @@ const CommonFields: FC<ICommonFields> = ({
     <>
       <Controller
         control={control}
-        name={'email'}
+        name={'login'}
         rules={{
           ...FIELD_IS_REQUIRED,
         }}
         render={({ field, fieldState: { error } }) => (
           <InputField
-            icon={Mail}
-            description={'Поле ввода электронной почты'}
-            placeholder={'Email'}
+            icon={CircleUserRound}
+            description={'Поле ввода логина'}
+            placeholder={'Логин'}
             type={'email'}
             warning={error?.message}
             {...field}

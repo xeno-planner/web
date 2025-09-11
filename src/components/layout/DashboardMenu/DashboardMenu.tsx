@@ -3,7 +3,6 @@
 import cn from 'classnames';
 import type { VariableFC } from 'xenopomp-essentials';
 
-import { AdminMenu } from '@/app/admin/components';
 import { Divider, Spacer } from '@/src/components/ui';
 
 import styles from './DashboardMenu.module.scss';
@@ -52,7 +51,7 @@ const DashboardMenu: VariableFC.Legacy<
           </>
         )}
 
-        <AdminMenu variant={variant} />
+        {/* <AdminMenu variant={variant} /> */}
       </ul>
     </nav>
   );

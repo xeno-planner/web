@@ -37,7 +37,7 @@ const Profile: FC<ProfileProps> = () => {
         <section className={cn(styles.name)}>
           <strong>{data.user.name || 'Аноним'}</strong>
           <p>
-            <TextOverflow text={data.user.email} />
+            <TextOverflow text={data.user.login} />
           </p>
         </section>
 
