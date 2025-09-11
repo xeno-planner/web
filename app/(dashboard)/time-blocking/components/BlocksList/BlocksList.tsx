@@ -14,7 +14,7 @@ import WarningMessage from '@/src/components/ui/WarningMessage';
 import styles from './BlocksList.module.scss';
 import type { BlocksListProps } from './BlocksList.props';
 
-const BlocksList: VariableFC<'article', BlocksListProps, 'children'> = ({
+const BlocksList: VariableFC.Legacy<'article', BlocksListProps, 'children'> = ({
   className,
   ...props
 }) => {

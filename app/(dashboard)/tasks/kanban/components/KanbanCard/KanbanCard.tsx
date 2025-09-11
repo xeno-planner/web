@@ -15,7 +15,7 @@ import KanbanOverlay from '../KanbanOverlay';
 import styles from './KanbanCard.module.scss';
 import type { KanbanCardProps } from './KanbanCard.props';
 
-const KanbanCard: VariableFC<
+const KanbanCard: VariableFC.Legacy<
   'article',
   KanbanCardProps,
   'children' | 'ref'

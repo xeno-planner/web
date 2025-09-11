@@ -24,7 +24,7 @@ import type { TimerProps } from './Timer.props.ts';
  * @param props
  * @constructor
  */
-const Timer: VariableFC<'section', TimerProps, 'children'> = ({
+const Timer: VariableFC.Legacy<'section', TimerProps, 'children'> = ({
   className,
   ...props
 }) => {

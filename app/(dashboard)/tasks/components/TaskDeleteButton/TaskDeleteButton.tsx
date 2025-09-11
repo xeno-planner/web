@@ -16,7 +16,7 @@ import type { TaskDeleteButtonProps } from './TaskDeleteButton.props';
  * @param props
  * @constructor
  */
-const TaskDeleteButton: VariableFC<
+const TaskDeleteButton: VariableFC.Legacy<
   LucideIcon,
   TaskDeleteButtonProps,
   'children'

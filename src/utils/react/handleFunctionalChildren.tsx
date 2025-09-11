@@ -20,7 +20,7 @@ import { type FunctionalChildren } from 'xenopomp-essentials';
  * const otherResult = handleFunctionalChildren(<button>Click on me</button>);
  */
 export const handleFunctionalChildren = <Args extends any[] = unknown[]>(
-  children?: FunctionalChildren<Args>,
+  children?: FunctionalChildren.Legacy<Args>,
   ...args: Args
 ): ReactNode => {
   if (typeof children !== 'function') {

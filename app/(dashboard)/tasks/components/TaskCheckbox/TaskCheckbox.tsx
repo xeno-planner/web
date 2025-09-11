@@ -4,7 +4,7 @@ import Checkbox from '@/src/components/ui/Checkbox';
 
 import type { TaskCheckboxProps } from './TaskCheckbox.props';
 
-const TaskCheckbox: VariableFC<
+const TaskCheckbox: VariableFC.Legacy<
   typeof Checkbox,
   TaskCheckboxProps,
   'children' | 'checked' | 'editable' | 'edit'
