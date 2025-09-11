@@ -50,3 +50,4 @@ XENO Planner is application for planning your working time. Includes canban boar
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
