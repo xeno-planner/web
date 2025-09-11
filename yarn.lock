@@ -5622,10 +5622,10 @@
     "@webassemblyjs/ast" "1.14.1"
     "@xtuc/long" "4.2.2"
 
-"@xeno-planner/backend-types@^1.0.2-canary.1":
-  version "1.0.2-canary.1"
-  resolved "https://registry.yarnpkg.com/@xeno-planner/backend-types/-/backend-types-1.0.2-canary.1.tgz#661c1d61b6187caac830c2a2e3575abaea101205"
-  integrity sha512-hSUTi2ozVNGolR6DkRfa/097jfLmXqYaR6IO5Q0HVE+LOsVbRwI/g1/FdMXXCdRQ6K4Ye3ItneHpmfT9/E6QuQ==
+"@xeno-planner/backend-types@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@xeno-planner/backend-types/-/backend-types-1.1.0.tgz#dd4c5607f8b415e4c3771b73e878df4dc922e37b"
+  integrity sha512-EndYvqFNCR8ixJRxi3CInR4zJUmheNomQhbKCpI0pT/QQGJWqUGhrZVlhYfRu5nglIkS8hhIqvoiOIR4WlB+lA==
 
 "@xenopomp/advanced-utils@^1.2.2":
   version "1.2.2"
