@@ -13,7 +13,6 @@ export async function middleware(request: NextRequest, response: NextResponse) {
   /** Refresh token from cookies. */
   const refreshToken = cookies.get(EnumTokens.REFRESH_TOKEN)?.value;
   // TODO Remove these logs
-  console.log(cookies.toString());
   console.log(
     `<${url}> is being accessed with refresh token: ${refreshToken ?? 'none'}`,
   );
