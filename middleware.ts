@@ -12,6 +12,10 @@ export async function middleware(request: NextRequest, response: NextResponse) {
 
   /** Refresh token from cookies. */
   const refreshToken = cookies.get(EnumTokens.REFRESH_TOKEN)?.value;
+  // TODO Remove this log
+  console.log(
+    `<${url}> is being accessed with refresh token: ${refreshToken ?? 'none'}`,
+  );
 
   /** True if current page is auth page. */
   const isAuthPage = url.includes('/auth');
